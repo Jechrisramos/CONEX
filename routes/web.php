@@ -42,7 +42,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
     Route::resource('/users', UsersController::class)->middleware('isAdmin');
     Route::resource('/tickets', TicketsController::class);
     Route::resource('/avatars', AvatarController::class);
-}); 
+}); //only logged in users can access this routes
 
 // Routes below are open to public viewing
 
